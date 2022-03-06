@@ -17,20 +17,4 @@ public class Ball : MonoBehaviour
     {
         
     }
-    
-    void onCollisionEnter2D(Collision2D other) 
-    {
-        System.Console.WriteLine("I'm here");
-        Debug.Log(other);
-        if (other.gameObject.tag == "WallRight")
-        {
-            Debug.Log("push left");
-            rb.AddForce(Vector2.left * pushForce, ForceMode2D.Impulse);
-        }
-        else if (other.gameObject.tag == "WallLeft")
-        {
-            Debug.Log("push right");
-            rb.AddForce(Vector2.right * pushForce, ForceMode2D.Impulse);
-        }
-    }
 }
